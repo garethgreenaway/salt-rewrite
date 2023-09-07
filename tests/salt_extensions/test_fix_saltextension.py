@@ -9,8 +9,12 @@ def test_module_level_package_import(tempfiles):
     if not os.environ.get("SALTEXT_NAME"):
         os.environ["SALTEXT_NAME"] = "docker"
 
+    assert os.environ.get("SALTEXT_NAME")
+
     if not os.environ.get("SALT_MOD"):
         os.environ["SALT_MOD"] = "dockermod"
+
+    assert os.environ.get("SALT_MOD")
 
     code = textwrap.dedent(
         f"""
@@ -45,8 +49,12 @@ def test_module_level_from_package_import(tempfiles):
     if not os.environ.get("SALTEXT_NAME"):
         os.environ["SALTEXT_NAME"] = "docker"
 
+    assert os.environ.get("SALTEXT_NAME")
+
     if not os.environ.get("SALT_MOD"):
         os.environ["SALT_MOD"] = "dockermod"
+
+    assert os.environ.get("SALT_MOD")
 
     code = textwrap.dedent(
         f"""
@@ -77,8 +85,12 @@ def test_module_level_patch(tempfiles):
     if not os.environ.get("SALTEXT_NAME"):
         os.environ["SALTEXT_NAME"] = "docker"
 
+    assert os.environ.get("SALTEXT_NAME")
+
     if not os.environ.get("SALT_MOD"):
         os.environ["SALT_MOD"] = "dockermod"
+
+    assert os.environ.get("SALT_MOD")
 
     code = textwrap.dedent(
         f"""
